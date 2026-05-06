@@ -1,6 +1,6 @@
 
 
-// ----------------------------------------------------------- 1
+// ------ 1
 const filterEvenNumbers =
     (input: number[]): number[] => {
         return [...input].filter((value) => { return value % 2 === 0 })
@@ -8,14 +8,14 @@ const filterEvenNumbers =
 
 
 
-// ----------------------------------------------------------- 2
+// ------ 2
 const reverseString = (input: string): string => {
     return input.split("").reverse().join("")
 }
 
 
 
-// ----------------------------------------------------------- 3
+// ------ 3
 type StringOrNumber = string | number;
 
 const checkType = (input: StringOrNumber): "String" | "Number" => {
@@ -23,7 +23,7 @@ const checkType = (input: StringOrNumber): "String" | "Number" => {
 }
 
 
-// ----------------------------------------------------------- 4
+// ------ 4
 type user_type = {
     readonly id: number;
     name: string,
@@ -36,7 +36,7 @@ const getProperty = <T, K extends keyof T> (object_input: T, key_input:K ): T[K]
 
 
 
-// ----------------------------------------------------------- 5
+// ------ 5
 interface Book {
     title : string,
     author: string,
@@ -52,7 +52,7 @@ return {
 
 
 
-// ----------------------------------------------------------- 6
+// ------ 6
 class Person{
     name:string;
     age:number;
@@ -78,7 +78,7 @@ class Student extends Person {
 
 
 
-// ----------------------------------------------------------- 7
+// ------ 7
 const getIntersection =(arr1:number[],arr2:number[]): number[] =>{
    const set_arr2 = new Set(arr2);
 
