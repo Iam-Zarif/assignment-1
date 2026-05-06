@@ -1,37 +1,36 @@
 
 
-
-const filterEvenNumbers = (input: number[]) => {
-    const result = [...input].filter((value) => { return value % 2 === 0 })
-
-    if (result.length === 0) {
-        return "No Even Number Found"
+// ----------------------------------------------------------- 1
+const filterEvenNumbers =
+    (input: number[]): number[] => {
+        return [...input].filter((value) => { return value % 2 === 0 })
     }
-    else return result
-}
-
-// -----------------------------------------------------------
 
 
 
-const reverseString = (input: string) => {
-    if (input === "") return "Empty string provided"
-
-    else { 
-        return input.split("").reverse().join("") 
-    };
+// ----------------------------------------------------------- 2
+const reverseString = (input: string): string => {
+    return input.split("").reverse().join("")
 }
 
 
-// -----------------------------------------------------------
+// ----------------------------------------------------------- 3
+type Type_check = string | number;
 
-
-type TypeCheck = string | number;
-
-const checkType = (input: TypeCheck):"String" | "Number" => {
-      return typeof input === "string" ? "String" : "Number"
+const checkType = (input: Type_check): Type_check => {
+    return typeof input === "string" ? "String" : "Number"
 }
 
+// ----------------------------------------------------------- 4
 
-// -----------------------------------------------------------
+type user_type = {
+    readonly id: number;
+    name: string,
+    age: number
+}
 
+const getProperty = <T, K extends keyof T> (object_input: T, key_input:K ) => {
+    return object_input[key_input]
+}
+
+// ----------------------------------------------------------- 5
